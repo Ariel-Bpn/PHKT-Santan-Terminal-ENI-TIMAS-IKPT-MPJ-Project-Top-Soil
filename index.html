@@ -270,7 +270,7 @@ svg.grafik{width:100%;height:auto;display:block}
     <div class="sisi-kop"><img id="imgAenSisi" alt="AEN"></div>
     <div class="sisi-proyek">
       <div class="nm" id="sisiNamaProyek">Earthwork PHKT Santan Terminal</div>
-      <div class="lk" id="sisiLokasi">Marangkayu &middot; Kutai Kartanegara</div>
+      <div class="lk" id="sisiLokasi">Santan Terminal &middot; Kutai Kartanegara</div>
     </div>
     <nav id="menu"></nav>
     <div class="sisi-kaki">
@@ -337,7 +337,7 @@ const $$ = s => Array.from(document.querySelectorAll(s));
 const uid = p => (p||"R") + "-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,6);
 const dua = x => String(x).padStart(2,"0");
 /* ---------- waktu proyek ----------
-   Seluruh tanggal dan jam di aplikasi memakai waktu site Marangkayu (WITA, UTC+8),
+   Seluruh tanggal dan jam di aplikasi memakai waktu site Santan Terminal (WITA, UTC+8),
    berapa pun setelan zona waktu di laptop atau HP pengguna. Dengan begitu satu hari
    kerja berarti hal yang sama untuk semua orang, termasuk yang membuka dari luar
    Kalimantan atau yang zona waktu perangkatnya salah setelan. */
@@ -426,7 +426,7 @@ function audit(t, id, aksi, catatan, lama){
 function P(){
   let p = tabel("MASTER_PROJECT")[0];
   if(!p){ p = {id:"PRJ", nama:"Land Preparation & Hauling — PHKT Santan Terminal",
-    lokasi:"Marangkayu, Kutai Kartanegara", pemilik:"Pertamina Hulu Sanga Sanga (PHKT)",
+    lokasi:"Santan Terminal, Kutai Kartanegara", pemilik:"Pertamina Hulu Sanga Sanga (PHKT)",
     maincon:"Konsorsium Eni – Timas IKPT", pelaksana:"PT. Avindo Energi Nusantara",
     noSpk:"", nilaiSpk:0, scope:"Topsoil stripping ±30 cm, hauling ±1 km, disposal",
     luas:10000, tebal:0.3, volBaseline:3000, jarakHauling:1, shift:1, jamKerja:8,
@@ -2865,14 +2865,14 @@ HALAMAN.pengaturan = () => {
         <table class="tab"><tbody>
           <tr><th>Versi</th><td>${VERSI}</td></tr>
           <tr><th>Pengguna</th><td>${esc(USER.nama)} — ${esc(PERAN[USER.peran].nama)}</td></tr>
-          <tr><th>Waktu proyek dipakai aplikasi</th><td>${esc(skrg())} ${ZONA_NAMA} (UTC+8, jam site Marangkayu)</td></tr>
+          <tr><th>Waktu proyek dipakai aplikasi</th><td>${esc(skrg())} ${ZONA_NAMA} (UTC+8, jam site Santan Terminal)</td></tr>
           <tr><th>Jam perangkat ini</th><td>${esc(jamPerangkat())} · zona ${esc(zonaPerangkat())}</td></tr>
           <tr><th>Ketepatan jam perangkat</th><td>${DB._meta.cekJam
             ? (jamMeleset()? `<span class="st merah">meleset ${ang(Math.abs(bedaJam()))} menit</span>` : `<span class="st hijau">akurat</span>`) + ` — diperiksa ${esc(DB._meta.cekJam)}`
             : "belum pernah diperiksa, tekan Sinkronkan"}</td></tr>
           <tr><th>Jumlah catatan</th><td>${ang(TABEL.reduce((a,t)=>a+tabel(t).length,0))} baris</td></tr>
           <tr><th>Pemberi kerja</th><td>Konsorsium Eni – Timas IKPT</td></tr>
-          <tr><th>Area</th><td>Pertamina Hulu Sanga Sanga, Marangkayu</td></tr>
+          <tr><th>Area</th><td>Pertamina Hulu Sanga Sanga, Santan Terminal</td></tr>
         </tbody></table>
         <div class="baris" style="margin-top:12px">
           <div class="klm sempit"><label>&nbsp;</label><button class="tbl" onclick="keluar()">Keluar</button></div>
