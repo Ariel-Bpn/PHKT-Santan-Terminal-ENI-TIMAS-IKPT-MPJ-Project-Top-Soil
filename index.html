@@ -259,7 +259,7 @@ svg.grafik{width:100%;height:auto;display:block}
     </div>
     <div class="login-konsor">
       <img id="imgKonsorLogin" alt="ENI - TIMAS IKPT Consortium">
-      <div class="ket">Pekerjaan untuk Konsorsium ENI &ndash; TIMAS IKPT di area Pertamina Hulu Sanga Sanga</div>
+      <div class="ket">Pekerjaan untuk Konsorsium ENI &ndash; TIMAS IKPT di area PHKT Santan Termina/div>
       <div class="ket" style="margin-top:5px" id="versiLogin"></div>
     </div>
   </div>
@@ -426,7 +426,7 @@ function audit(t, id, aksi, catatan, lama){
 function P(){
   let p = tabel("MASTER_PROJECT")[0];
   if(!p){ p = {id:"PRJ", nama:"Land Preparation & Hauling — PHKT Santan Terminal",
-    lokasi:"Santan Terminal, Kutai Kartanegara", pemilik:"Pertamina Hulu Sanga Sanga (PHKT)",
+    lokasi:"Santan Terminal, Kutai Kartanegara", pemilik:"Pertamina HKT",
     maincon:"Konsorsium ENI – TIMAS IKPT", pelaksana:"PT. AEN",
     noSpk:"", nilaiSpk:0, scope:"Topsoil stripping ±30 cm, hauling ±1 km, disposal",
     luas:10000, tebal:0.3, volBaseline:3000, jarakHauling:1, shift:1, jamKerja:8,
@@ -2872,7 +2872,7 @@ HALAMAN.pengaturan = () => {
             : "belum pernah diperiksa, tekan Sinkronkan"}</td></tr>
           <tr><th>Jumlah catatan</th><td>${ang(TABEL.reduce((a,t)=>a+tabel(t).length,0))} baris</td></tr>
           <tr><th>Pemberi kerja</th><td>Konsorsium ENI – TIMAS IKPT</td></tr>
-          <tr><th>Area</th><td>Pertamina Hulu Sanga Sanga, Santan Terminal</td></tr>
+          <tr><th>Area</th><td>PHKT, Santan Terminal</td></tr>
         </tbody></table>
         <div class="baris" style="margin-top:12px">
           <div class="klm sempit"><label>&nbsp;</label><button class="tbl" onclick="keluar()">Keluar</button></div>
